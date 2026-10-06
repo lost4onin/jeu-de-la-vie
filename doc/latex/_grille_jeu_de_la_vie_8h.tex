@@ -1,0 +1,225 @@
+\hypertarget{_grille_jeu_de_la_vie_8h}{}\doxysection{Référence du fichier include/\+Grille\+Jeu\+De\+La\+Vie.h}
+\label{_grille_jeu_de_la_vie_8h}\index{include/GrilleJeuDeLaVie.h@{include/GrilleJeuDeLaVie.h}}
+
+
+Implantation du T\+AD Grille pour le jeu de la vie.  
+
+
+\doxysubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}}
+\begin{DoxyCompactList}\small\item\em Le type \mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} permet de représenter une grille. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} \mbox{\hyperlink{_grille_jeu_de_la_vie_8h_a25c36f35c03acf221714cc22f3ea8ba6}{J\+D\+L\+V\+\_\+grille}} (unsigned int largeur, unsigned int hauteur)
+\begin{DoxyCompactList}\small\item\em Fonction de création d\textquotesingle{}une grille de cellules mortes. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{_grille_jeu_de_la_vie_8h_abb875c26fa61589c7ecdff6d73d15493}{J\+D\+L\+V\+\_\+obtenir\+Largeur}} (\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} la\+Grille)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet d\textquotesingle{}obtenir la largeur d\textquotesingle{}une grille. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{_grille_jeu_de_la_vie_8h_adc3a8857893247b1d2eadc068d66cba6}{J\+D\+L\+V\+\_\+obtenir\+Hauteur}} (\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} la\+Grille)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet d\textquotesingle{}obtenir la hauteur d\textquotesingle{}une grille. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_grille_jeu_de_la_vie_8h_a369a0369ef17baa1e33e7fac7e9a7c2c}{J\+D\+L\+V\+\_\+tuer\+Cellule}} (\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} $\ast$la\+Grille, unsigned int x, unsigned int y)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de tuer une cellule d\textquotesingle{}une grille. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_grille_jeu_de_la_vie_8h_a1a0b11608fb858a82915555904dcf0a0}{J\+D\+L\+V\+\_\+faire\+Naitre\+Cellule}} (\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} $\ast$la\+Grille, unsigned int x, unsigned int y)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de tuer une cellule d\textquotesingle{}une grille. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_grille_jeu_de_la_vie_8h_adeacd9d78ee9ea7d971a8ce6e2c06661}{J\+D\+L\+V\+\_\+est\+Cellule\+Vivante}} (\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} la\+Grille, unsigned int x, unsigned int y)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de tuer une cellule d\textquotesingle{}une grille. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} \mbox{\hyperlink{_grille_jeu_de_la_vie_8h_a5cfd2621a68740eb2c1829b55712cd0c}{J\+D\+L\+V\+\_\+copier}} (\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} une\+Grille)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de copier une grille. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_grille_jeu_de_la_vie_8h_ac62859f1a2e476c6ab167c8c88fe80c9}{J\+D\+L\+V\+\_\+meme\+Grilles}} (\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} une\+Grille, \mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} une\+Autre\+Grille)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de savoir si deux grilles sont égales. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_grille_jeu_de_la_vie_8h_a1eee7486abfa6fa7bf88fe6ddd1c161f}{J\+D\+L\+V\+\_\+effacer}} (\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} $\ast$une\+Grille)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de libérer l\textquotesingle{}espace mémoire qui a été réservé pour stocker les éléments de la grille. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Implantation du T\+AD Grille pour le jeu de la vie. 
+
+\begin{DoxyAuthor}{Auteur}
+N. Delestre 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20/4/2015 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{_grille_jeu_de_la_vie_8h_a5cfd2621a68740eb2c1829b55712cd0c}\label{_grille_jeu_de_la_vie_8h_a5cfd2621a68740eb2c1829b55712cd0c}} 
+\index{GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}!JDLV\_copier@{JDLV\_copier}}
+\index{JDLV\_copier@{JDLV\_copier}!GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}}
+\doxysubsubsection{\texorpdfstring{JDLV\_copier()}{JDLV\_copier()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} J\+D\+L\+V\+\_\+copier (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}}}]{une\+Grille }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de copier une grille. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em une\+Grille,la} & grille à copier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_grille_jeu_de_la_vie_8h_a1eee7486abfa6fa7bf88fe6ddd1c161f}\label{_grille_jeu_de_la_vie_8h_a1eee7486abfa6fa7bf88fe6ddd1c161f}} 
+\index{GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}!JDLV\_effacer@{JDLV\_effacer}}
+\index{JDLV\_effacer@{JDLV\_effacer}!GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}}
+\doxysubsubsection{\texorpdfstring{JDLV\_effacer()}{JDLV\_effacer()}}
+{\footnotesize\ttfamily void J\+D\+L\+V\+\_\+effacer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} $\ast$}]{une\+Grille }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de libérer l\textquotesingle{}espace mémoire qui a été réservé pour stocker les éléments de la grille. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em une\+Grille} & \+: la grille \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_grille_jeu_de_la_vie_8h_adeacd9d78ee9ea7d971a8ce6e2c06661}\label{_grille_jeu_de_la_vie_8h_adeacd9d78ee9ea7d971a8ce6e2c06661}} 
+\index{GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}!JDLV\_estCelluleVivante@{JDLV\_estCelluleVivante}}
+\index{JDLV\_estCelluleVivante@{JDLV\_estCelluleVivante}!GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}}
+\doxysubsubsection{\texorpdfstring{JDLV\_estCelluleVivante()}{JDLV\_estCelluleVivante()}}
+{\footnotesize\ttfamily int J\+D\+L\+V\+\_\+est\+Cellule\+Vivante (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}}}]{la\+Grille,  }\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de tuer une cellule d\textquotesingle{}une grille. 
+
+\begin{DoxyAttention}{Attention}
+assertion \+: sur x et y
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Paramètres}
+{\em la\+Grille} & \+: la grille \\
+\hline
+{\em x} & \+: la colonne (largeur) ou se trouve la cellule \\
+\hline
+{\em y} & \+: la ligne (hauteur) ou se trouve la cellule \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int (0 non 1 oui) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_grille_jeu_de_la_vie_8h_a1a0b11608fb858a82915555904dcf0a0}\label{_grille_jeu_de_la_vie_8h_a1a0b11608fb858a82915555904dcf0a0}} 
+\index{GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}!JDLV\_faireNaitreCellule@{JDLV\_faireNaitreCellule}}
+\index{JDLV\_faireNaitreCellule@{JDLV\_faireNaitreCellule}!GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}}
+\doxysubsubsection{\texorpdfstring{JDLV\_faireNaitreCellule()}{JDLV\_faireNaitreCellule()}}
+{\footnotesize\ttfamily void J\+D\+L\+V\+\_\+faire\+Naitre\+Cellule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} $\ast$}]{la\+Grille,  }\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de tuer une cellule d\textquotesingle{}une grille. 
+
+\begin{DoxyAttention}{Attention}
+assertion \+: sur x et y
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Paramètres}
+{\em la\+Grille} & \+: un pointeur sur la grille \\
+\hline
+{\em x} & \+: la colonne (largeur) ou se trouve la cellule \\
+\hline
+{\em y} & \+: la ligne (hauteur) ou se trouve la cellule \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_grille_jeu_de_la_vie_8h_a25c36f35c03acf221714cc22f3ea8ba6}\label{_grille_jeu_de_la_vie_8h_a25c36f35c03acf221714cc22f3ea8ba6}} 
+\index{GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}!JDLV\_grille@{JDLV\_grille}}
+\index{JDLV\_grille@{JDLV\_grille}!GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}}
+\doxysubsubsection{\texorpdfstring{JDLV\_grille()}{JDLV\_grille()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} J\+D\+L\+V\+\_\+grille (\begin{DoxyParamCaption}\item[{unsigned int}]{largeur,  }\item[{unsigned int}]{hauteur }\end{DoxyParamCaption})}
+
+
+
+Fonction de création d\textquotesingle{}une grille de cellules mortes. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em largeur} & \+: la largeur de la grille \\
+\hline
+{\em hauteur} & \+: la hauteur de la grille \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_grille_jeu_de_la_vie_8h_ac62859f1a2e476c6ab167c8c88fe80c9}\label{_grille_jeu_de_la_vie_8h_ac62859f1a2e476c6ab167c8c88fe80c9}} 
+\index{GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}!JDLV\_memeGrilles@{JDLV\_memeGrilles}}
+\index{JDLV\_memeGrilles@{JDLV\_memeGrilles}!GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}}
+\doxysubsubsection{\texorpdfstring{JDLV\_memeGrilles()}{JDLV\_memeGrilles()}}
+{\footnotesize\ttfamily int J\+D\+L\+V\+\_\+meme\+Grilles (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}}}]{une\+Grille,  }\item[{\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}}}]{une\+Autre\+Grille }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de savoir si deux grilles sont égales. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em une\+Grille} & \+: une première grille \\
+\hline
+{\em une\+Autre\+Grille} & \+: une deuxième grille \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int (0 non 1 oui) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_grille_jeu_de_la_vie_8h_adc3a8857893247b1d2eadc068d66cba6}\label{_grille_jeu_de_la_vie_8h_adc3a8857893247b1d2eadc068d66cba6}} 
+\index{GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}!JDLV\_obtenirHauteur@{JDLV\_obtenirHauteur}}
+\index{JDLV\_obtenirHauteur@{JDLV\_obtenirHauteur}!GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}}
+\doxysubsubsection{\texorpdfstring{JDLV\_obtenirHauteur()}{JDLV\_obtenirHauteur()}}
+{\footnotesize\ttfamily unsigned int J\+D\+L\+V\+\_\+obtenir\+Hauteur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}}}]{la\+Grille }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet d\textquotesingle{}obtenir la hauteur d\textquotesingle{}une grille. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em la\+Grille} & \+: la grille \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+unsigned int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_grille_jeu_de_la_vie_8h_abb875c26fa61589c7ecdff6d73d15493}\label{_grille_jeu_de_la_vie_8h_abb875c26fa61589c7ecdff6d73d15493}} 
+\index{GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}!JDLV\_obtenirLargeur@{JDLV\_obtenirLargeur}}
+\index{JDLV\_obtenirLargeur@{JDLV\_obtenirLargeur}!GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}}
+\doxysubsubsection{\texorpdfstring{JDLV\_obtenirLargeur()}{JDLV\_obtenirLargeur()}}
+{\footnotesize\ttfamily unsigned int J\+D\+L\+V\+\_\+obtenir\+Largeur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}}}]{la\+Grille }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet d\textquotesingle{}obtenir la largeur d\textquotesingle{}une grille. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em la\+Grille} & \+: la grille \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+unsigned int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_grille_jeu_de_la_vie_8h_a369a0369ef17baa1e33e7fac7e9a7c2c}\label{_grille_jeu_de_la_vie_8h_a369a0369ef17baa1e33e7fac7e9a7c2c}} 
+\index{GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}!JDLV\_tuerCellule@{JDLV\_tuerCellule}}
+\index{JDLV\_tuerCellule@{JDLV\_tuerCellule}!GrilleJeuDeLaVie.h@{GrilleJeuDeLaVie.h}}
+\doxysubsubsection{\texorpdfstring{JDLV\_tuerCellule()}{JDLV\_tuerCellule()}}
+{\footnotesize\ttfamily void J\+D\+L\+V\+\_\+tuer\+Cellule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_d_l_v___grille}{J\+D\+L\+V\+\_\+\+Grille}} $\ast$}]{la\+Grille,  }\item[{unsigned int}]{x,  }\item[{unsigned int}]{y }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de tuer une cellule d\textquotesingle{}une grille. 
+
+\begin{DoxyAttention}{Attention}
+assertion \+: sur x et y
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Paramètres}
+{\em la\+Grille} & \+: un pointeur sur la grille \\
+\hline
+{\em x} & \+: la colonne (largeur) ou se trouve la cellule \\
+\hline
+{\em y} & \+: la ligne (hauteur) ou se trouve la cellule \\
+\hline
+\end{DoxyParams}

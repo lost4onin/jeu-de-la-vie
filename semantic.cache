@@ -1,0 +1,15 @@
+;; Object Correction/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Correction/"
+  :tables (list 
+   (semanticdb-table "makefile"
+    :major-mode 'makefile-mode
+    :tags '(("SRCDIR" variable (:default-value ("src")) nil [1 12]) ("LIBDIR" variable (:default-value ("lib")) nil [12 23]) ("BINDIR" variable (:default-value ("bin")) nil [23 34]) ("CC" variable (:default-value ("gcc")) nil [53 62]) ("AR" variable (:default-value ("ar")) nil [62 70]) ("CFLAGS" variable (:default-value ("-Wall" "-pedantic" "-g" "-std=c99" "-I$(INCLUDEDIR)")) nil [70 124]) ("LDFLAGS" variable (:default-value ("-lm" "-lcurses")) nil [124 146]) ("EXEC" variable (:default-value ("jeuDeLaVie")) nil [146 162]) ("all" function (:arguments ("$(BINDIR)/$(EXEC)")) nil [163 189]) ("$(BINDIR)" function (:arguments ("$(SRCDIR)/main.o" "$(SRCDIR)/GrilleJeuDeLaVie.o" "$(SRCDIR)/JeuDeLaVie.o")) nil [189 304]) ("$(LIBDIR)" function (:arguments ("$(SRCDIR)/JeuDeLaVie.o")) nil [304 306]) ("$(SRCDIR)" function (:arguments ("$(SRCDIR)/%.c")) nil [306 365]) ("clean" function nil nil [366 436]))
+    :file "makefile"
+    :pointmax 436
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0pre3"
+  :semanticdb-version "2.0pre3"
+  )

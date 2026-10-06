@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Jeu de la vie:  Fichier source de include/GrilleJeuDeLaVie.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Jeu de la vie
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GrilleJeuDeLaVie.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_grille_jeu_de_la_vie_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef __GRILLE_JEU_DE_LA_VIE__</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define __GRILLE_JEU_DE_LA_VIE__</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="struct_j_d_l_v___grille.html">   18</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="struct_j_d_l_v___grille.html#a57e9bc2e6956d6fbbb7c6045ecbeac32">   19</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_j_d_l_v___grille.html#a57e9bc2e6956d6fbbb7c6045ecbeac32">largeur</a>; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="struct_j_d_l_v___grille.html#ac3fc21fbeb899cb37ea7857bd2f5771b">   20</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_j_d_l_v___grille.html#ac3fc21fbeb899cb37ea7857bd2f5771b">hauteur</a>; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_j_d_l_v___grille.html#a23d0a581eb9e6560f317efe0623aead0">   21</a></span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> *<a class="code" href="struct_j_d_l_v___grille.html#a23d0a581eb9e6560f317efe0623aead0">cellules</a>; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;} <a class="code" href="struct_j_d_l_v___grille.html">JDLV_Grille</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<a class="code" href="struct_j_d_l_v___grille.html">JDLV_Grille</a> <a class="code" href="_grille_jeu_de_la_vie_8h.html#a25c36f35c03acf221714cc22f3ea8ba6">JDLV_grille</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> largeur,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> hauteur);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="_grille_jeu_de_la_vie_8h.html#abb875c26fa61589c7ecdff6d73d15493">JDLV_obtenirLargeur</a>(<a class="code" href="struct_j_d_l_v___grille.html">JDLV_Grille</a> laGrille);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="_grille_jeu_de_la_vie_8h.html#adc3a8857893247b1d2eadc068d66cba6">JDLV_obtenirHauteur</a>(<a class="code" href="struct_j_d_l_v___grille.html">JDLV_Grille</a> laGrille);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_grille_jeu_de_la_vie_8h.html#a369a0369ef17baa1e33e7fac7e9a7c2c">JDLV_tuerCellule</a>(<a class="code" href="struct_j_d_l_v___grille.html">JDLV_Grille</a>* laGrille, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_grille_jeu_de_la_vie_8h.html#a1a0b11608fb858a82915555904dcf0a0">JDLV_faireNaitreCellule</a>(<a class="code" href="struct_j_d_l_v___grille.html">JDLV_Grille</a>* laGrille, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">int</span> <a class="code" href="_grille_jeu_de_la_vie_8h.html#adeacd9d78ee9ea7d971a8ce6e2c06661">JDLV_estCelluleVivante</a>(<a class="code" href="struct_j_d_l_v___grille.html">JDLV_Grille</a> laGrille, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">/* fonctions liees a l&#39;utilisation du C et de l&#39;allocation dynamique */</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<a class="code" href="struct_j_d_l_v___grille.html">JDLV_Grille</a> <a class="code" href="_grille_jeu_de_la_vie_8h.html#a5cfd2621a68740eb2c1829b55712cd0c">JDLV_copier</a>(<a class="code" href="struct_j_d_l_v___grille.html">JDLV_Grille</a> uneGrille);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordtype">int</span> <a class="code" href="_grille_jeu_de_la_vie_8h.html#ac62859f1a2e476c6ab167c8c88fe80c9">JDLV_memeGrilles</a>(<a class="code" href="struct_j_d_l_v___grille.html">JDLV_Grille</a> uneGrille, <a class="code" href="struct_j_d_l_v___grille.html">JDLV_Grille</a> uneAutreGrille);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_grille_jeu_de_la_vie_8h.html#a1eee7486abfa6fa7bf88fe6ddd1c161f">JDLV_effacer</a>(<a class="code" href="struct_j_d_l_v___grille.html">JDLV_Grille</a>* uneGrille);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="a_grille_jeu_de_la_vie_8h_html_adeacd9d78ee9ea7d971a8ce6e2c06661"><div class="ttname"><a href="_grille_jeu_de_la_vie_8h.html#adeacd9d78ee9ea7d971a8ce6e2c06661">JDLV_estCelluleVivante</a></div><div class="ttdeci">int JDLV_estCelluleVivante(JDLV_Grille laGrille, unsigned int x, unsigned int y)</div><div class="ttdoc">Fonction qui permet de tuer une cellule d'une grille.</div><div class="ttdef"><b>Definition:</b> GrilleJeuDeLaVie.c:70</div></div>
+<div class="ttc" id="a_grille_jeu_de_la_vie_8h_html_a5cfd2621a68740eb2c1829b55712cd0c"><div class="ttname"><a href="_grille_jeu_de_la_vie_8h.html#a5cfd2621a68740eb2c1829b55712cd0c">JDLV_copier</a></div><div class="ttdeci">JDLV_Grille JDLV_copier(JDLV_Grille uneGrille)</div><div class="ttdoc">Fonction qui permet de copier une grille.</div><div class="ttdef"><b>Definition:</b> GrilleJeuDeLaVie.c:79</div></div>
+<div class="ttc" id="astruct_j_d_l_v___grille_html_a23d0a581eb9e6560f317efe0623aead0"><div class="ttname"><a href="struct_j_d_l_v___grille.html#a23d0a581eb9e6560f317efe0623aead0">JDLV_Grille::cellules</a></div><div class="ttdeci">unsigned short * cellules</div><div class="ttdef"><b>Definition:</b> GrilleJeuDeLaVie.h:21</div></div>
+<div class="ttc" id="a_grille_jeu_de_la_vie_8h_html_a369a0369ef17baa1e33e7fac7e9a7c2c"><div class="ttname"><a href="_grille_jeu_de_la_vie_8h.html#a369a0369ef17baa1e33e7fac7e9a7c2c">JDLV_tuerCellule</a></div><div class="ttdeci">void JDLV_tuerCellule(JDLV_Grille *laGrille, unsigned int x, unsigned int y)</div><div class="ttdoc">Fonction qui permet de tuer une cellule d'une grille.</div><div class="ttdef"><b>Definition:</b> GrilleJeuDeLaVie.c:52</div></div>
+<div class="ttc" id="a_grille_jeu_de_la_vie_8h_html_adc3a8857893247b1d2eadc068d66cba6"><div class="ttname"><a href="_grille_jeu_de_la_vie_8h.html#adc3a8857893247b1d2eadc068d66cba6">JDLV_obtenirHauteur</a></div><div class="ttdeci">unsigned int JDLV_obtenirHauteur(JDLV_Grille laGrille)</div><div class="ttdoc">Fonction qui permet d'obtenir la hauteur d'une grille.</div><div class="ttdef"><b>Definition:</b> GrilleJeuDeLaVie.c:47</div></div>
+<div class="ttc" id="a_grille_jeu_de_la_vie_8h_html_abb875c26fa61589c7ecdff6d73d15493"><div class="ttname"><a href="_grille_jeu_de_la_vie_8h.html#abb875c26fa61589c7ecdff6d73d15493">JDLV_obtenirLargeur</a></div><div class="ttdeci">unsigned int JDLV_obtenirLargeur(JDLV_Grille laGrille)</div><div class="ttdoc">Fonction qui permet d'obtenir la largeur d'une grille.</div><div class="ttdef"><b>Definition:</b> GrilleJeuDeLaVie.c:42</div></div>
+<div class="ttc" id="astruct_j_d_l_v___grille_html_a57e9bc2e6956d6fbbb7c6045ecbeac32"><div class="ttname"><a href="struct_j_d_l_v___grille.html#a57e9bc2e6956d6fbbb7c6045ecbeac32">JDLV_Grille::largeur</a></div><div class="ttdeci">unsigned int largeur</div><div class="ttdef"><b>Definition:</b> GrilleJeuDeLaVie.h:19</div></div>
+<div class="ttc" id="astruct_j_d_l_v___grille_html"><div class="ttname"><a href="struct_j_d_l_v___grille.html">JDLV_Grille</a></div><div class="ttdoc">Le type JDLV_Grille permet de représenter une grille.</div><div class="ttdef"><b>Definition:</b> GrilleJeuDeLaVie.h:18</div></div>
+<div class="ttc" id="a_grille_jeu_de_la_vie_8h_html_a1a0b11608fb858a82915555904dcf0a0"><div class="ttname"><a href="_grille_jeu_de_la_vie_8h.html#a1a0b11608fb858a82915555904dcf0a0">JDLV_faireNaitreCellule</a></div><div class="ttdeci">void JDLV_faireNaitreCellule(JDLV_Grille *laGrille, unsigned int x, unsigned int y)</div><div class="ttdoc">Fonction qui permet de tuer une cellule d'une grille.</div><div class="ttdef"><b>Definition:</b> GrilleJeuDeLaVie.c:61</div></div>
+<div class="ttc" id="a_grille_jeu_de_la_vie_8h_html_ac62859f1a2e476c6ab167c8c88fe80c9"><div class="ttname"><a href="_grille_jeu_de_la_vie_8h.html#ac62859f1a2e476c6ab167c8c88fe80c9">JDLV_memeGrilles</a></div><div class="ttdeci">int JDLV_memeGrilles(JDLV_Grille uneGrille, JDLV_Grille uneAutreGrille)</div><div class="ttdoc">Fonction qui permet de savoir si deux grilles sont égales.</div><div class="ttdef"><b>Definition:</b> GrilleJeuDeLaVie.c:86</div></div>
+<div class="ttc" id="a_grille_jeu_de_la_vie_8h_html_a25c36f35c03acf221714cc22f3ea8ba6"><div class="ttname"><a href="_grille_jeu_de_la_vie_8h.html#a25c36f35c03acf221714cc22f3ea8ba6">JDLV_grille</a></div><div class="ttdeci">JDLV_Grille JDLV_grille(unsigned int largeur, unsigned int hauteur)</div><div class="ttdoc">Fonction de création d'une grille de cellules mortes.</div><div class="ttdef"><b>Definition:</b> GrilleJeuDeLaVie.c:30</div></div>
+<div class="ttc" id="a_grille_jeu_de_la_vie_8h_html_a1eee7486abfa6fa7bf88fe6ddd1c161f"><div class="ttname"><a href="_grille_jeu_de_la_vie_8h.html#a1eee7486abfa6fa7bf88fe6ddd1c161f">JDLV_effacer</a></div><div class="ttdeci">void JDLV_effacer(JDLV_Grille *uneGrille)</div><div class="ttdoc">Fonction qui permet de libérer l'espace mémoire qui a été réservé pour stocker les éléments de la gri...</div><div class="ttdef"><b>Definition:</b> GrilleJeuDeLaVie.c:110</div></div>
+<div class="ttc" id="astruct_j_d_l_v___grille_html_ac3fc21fbeb899cb37ea7857bd2f5771b"><div class="ttname"><a href="struct_j_d_l_v___grille.html#ac3fc21fbeb899cb37ea7857bd2f5771b">JDLV_Grille::hauteur</a></div><div class="ttdeci">unsigned int hauteur</div><div class="ttdef"><b>Definition:</b> GrilleJeuDeLaVie.h:20</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mercredi 1 Septembre 2021 14:23:04 pour Jeu de la vie par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
