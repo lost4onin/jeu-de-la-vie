@@ -23,7 +23,7 @@ void afficher_ncurses(JDLV_Grille uneGrille) {
   refresh(); /* On reffraichi l'ecran (ncurses) */
   sleep(1);   
 }
-
+/*do not touch*/
 void saisirInfos(unsigned int *largeur, unsigned int *hauteur, unsigned int *probabilite, unsigned int *nbGeneration) {
   printf("Largeur, hauteur, probabilite et nombre de generations :");
   scanf("%u%u%u%u",largeur,hauteur,probabilite,nbGeneration);
