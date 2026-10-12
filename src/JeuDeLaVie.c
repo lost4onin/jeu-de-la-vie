@@ -1,85 +1,79 @@
-#include <math.h>
-#include <time.h>
 #include <stdlib.h>
+#include <time.h>
 #include "GrilleJeuDeLaVie.h"
 #include "JeuDeLaVie.h"
 #include "JeuDeLaViePrive.h"
 
-/* Partie Privee */
-void initialiser(JDLV_Grille* uneGrille, unsigned short probabilite){
-  srand((unsigned int )time(NULL));
-  for (int i=0;i<JDLV_obtenirLargeur(*uneGrille);i++){
-    for (int j=0;j<JDLV_obtenirHauteur(*uneGrille);j++){
-      if (rand()%100 >= probabilite){
-        JDLV_faireNaitreCellule(uneGrille, i , j);
+void initialiser(JDLV_Grille* grille, unsigned short probabilite) {
+  unsigned int x;
+  unsigned int y;
+
+  srand((unsigned int)time(NULL));
+  for (x = 1; x <= JDLV_obtenirLargeur(*grille); x++) {
+    for (y = 1; y <= JDLV_obtenirHauteur(*grille); y++) {
+      if ((unsigned int)(rand() % 100) < probabilite) {
+        JDLV_faireNaitreCellule(grille, x, y);
       }
     }
   }
 }
 
-unsigned int max(unsigned int a, unsigned int b) {
-  if (a<b)
-    return b;
-  else
-    return a;
-}
+unsigned int nbVoisinsVivants(JDLV_Grille grille, unsigned int x, unsigned int y) {
+  unsigned int minimumX = x > 1 ? x - 1 : 1;
+  unsigned int minimumY = y > 1 ? y - 1 : 1;
+  unsigned int maximumX = x < JDLV_obtenirLargeur(grille) ? x + 1 : x;
+  unsigned int maximumY = y < JDLV_obtenirHauteur(grille) ? y + 1 : y;
+  unsigned int nombreVoisins = 0;
+  unsigned int voisinX;
+  unsigned int voisinY;
 
-unsigned int min(unsigned int a, unsigned int b) {
-  if (a>b) 
-    return b;
-  else
-    return a;
-}
-
-unsigned int nbVoisinsVivants(JDLV_Grille uneGrille, unsigned int x, unsigned int y) {
-  int resultat = 0;
-  long int minx = max(1,x-1);
-  long int miny = max(1,y-1);
-  long int maxx= min(JDLV_obtenirLargeur(uneGrille),x+1);
-  long int maxy = min(JDLV_obtenirHauteur(uneGrille),y+1);
-  for (int i = minx ; i<=maxx;i++){
-    for(int j = miny ; j<=maxy;j++){
-      if (JDLV_estCelluleVivante(uneGrille,i,j) && (i != x || j != y)){
-        resultat++;
+  for (voisinX = minimumX; voisinX <= maximumX; voisinX++) {
+    for (voisinY = minimumY; voisinY <= maximumY; voisinY++) {
+      if ((voisinX != x || voisinY != y) && JDLV_estCelluleVivante(grille, voisinX, voisinY)) {
+        nombreVoisins++;
       }
     }
   }
 
-  return resultat;
+  return nombreVoisins;
 }
 
-int vaNaitreOuContinuerAVivre(JDLV_Grille uneGrille, unsigned int i, unsigned int j) {
-  unsigned int nb;
-  nb=nbVoisinsVivants(uneGrille,i,j);
-  return ((JDLV_estCelluleVivante(uneGrille,i,j) && (nb>=2) && (nb<=3)) || (!JDLV_estCelluleVivante(uneGrille,i,j) && (nb==3)));
+int vaNaitreOuContinuerAVivre(JDLV_Grille grille, unsigned int x, unsigned int y) {
+  unsigned int nombreVoisins = nbVoisinsVivants(grille, x, y);
+  int celluleVivante = JDLV_estCelluleVivante(grille, x, y);
+
+  return (celluleVivante && (nombreVoisins == 2 || nombreVoisins == 3)) ||
+         (!celluleVivante && nombreVoisins == 3);
 }
 
-void calculerNouvelleGeneration(JDLV_Grille *uneGrille) {
-  JDLV_Grille *tmp = GrilleJeuDeLaVie(JDLV_obtenirLargeur(*uneGrille),JDLV_obtenirHauteur(*uneGrille));
-  for(int i=0;i<JDLV_obtenirLargeur(*uneGrille);i++){
-    for(int j=0;j<JDLV_obtenirHauteur(*uneGrille);j++){
-      if(vaNaitreOuContinuerAVivre(*uneGrille,i,j)){
-        JDLV_faireNaitreCellule(tmp,i,j);
+void calculerNouvelleGeneration(JDLV_Grille* grille) {
+  JDLV_Grille nouvelleGrille = JDLV_grille(JDLV_obtenirLargeur(*grille), JDLV_obtenirHauteur(*grille));
+  unsigned int x;
+  unsigned int y;
+
+  for (x = 1; x <= JDLV_obtenirLargeur(*grille); x++) {
+    for (y = 1; y <= JDLV_obtenirHauteur(*grille); y++) {
+      if (vaNaitreOuContinuerAVivre(*grille, x, y)) {
+        JDLV_faireNaitreCellule(&nouvelleGrille, x, y);
       }
-
     }
   }
-  uneGrille = tmp;
+
+  JDLV_effacer(grille);
+  *grille = nouvelleGrille;
 }
 
+void simulerJeuDeLaVie(unsigned int largeur, unsigned int hauteur, unsigned int probabilite, unsigned int nbGeneration, void (*afficher)(JDLV_Grille)) {
+  JDLV_Grille grille = JDLV_grille(largeur, hauteur);
+  unsigned int generation;
 
-
-/* Partie publique */
-void simulerJeuDeLaVie(unsigned int largeur, unsigned int hauteur, unsigned int probabilite, unsigned int nbGeneration, void(*afficher)(JDLV_Grille)) {
-  JDLV_Grille laGrille;
-  unsigned int i;  
-
-  laGrille=JDLV_grille(largeur,hauteur);
-  initialiser(&laGrille,probabilite);
-  for (i=1;i<=nbGeneration;i++) {
-    afficher(laGrille);
-    calculerNouvelleGeneration(&laGrille);
+  initialiser(&grille, (unsigned short)probabilite);
+  for (generation = 0; generation < nbGeneration; generation++) {
+    afficher(grille);
+    if (generation + 1 < nbGeneration) {
+      calculerNouvelleGeneration(&grille);
+    }
   }
-  afficher(laGrille);
-  JDLV_effacer(&laGrille);
+
+  JDLV_effacer(&grille);
 }
